@@ -14,12 +14,9 @@ Puede iniciar la demostración de la siguiente manera:
 
 ¡Finalmente solo envíe una solicitud!
 
-- POST http://localhost:3000/send-transaction
+- POST http://localhost:3000/game-lcr
 - Body : {
-              "accountExternalIdDebit": "781002e2-a0ec-40f9-992e-a4a6107fe6cd",
-              "accountExternalIdCredit": "781002e2-a0ec-40f9-992e-a4a6107fe6cd",
-              "tranferTypeId": 1,
-              "value": 850
-          }
+          "input": "3 LR.CCR.L.RLLLCLR.LL..R...CLR." 
+         }
 
 
