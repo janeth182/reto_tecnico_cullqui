@@ -76,7 +76,7 @@ export class LcrService {
                 }
             }
             console.log(result);
-            await lctDataAccess.saveResult(result);
+            await lctDataAccess.saveResult(detail, result);
             return result;
         }
     }

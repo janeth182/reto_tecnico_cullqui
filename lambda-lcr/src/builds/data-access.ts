@@ -3,9 +3,10 @@ import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 import { v4 as uuid } from 'uuid';
 
 export class LctDataAccess {
-    async saveResult(data: any) {
+    async saveResult(input: any, result :any) {
         console.log("Data-Access");
-        console.log(data);
+        console.log(`input: ${input}`);
+        console.log(`result: ${result}`);
         const client = new DynamoDBClient({
             credentials: {
                 accessKeyId: "AKIATAE6EWVTCJF7SHFH",
@@ -15,12 +16,15 @@ export class LctDataAccess {
         });
         const ddbDocClient = DynamoDBDocument.from(client);
         const TableName = "results";
+        const datetime = new Date().toISOString();   
         await ddbDocClient.put(
             {
                 TableName,
                 Item: {
                     id: uuid(),
-                    content: data,
+                    input: input,
+                    result: result,
+                    created_at: datetime
                 },
             }
         );
