@@ -1,39 +1,11 @@
-service: lambda-lcr
+service: lambda-lcr-game
 frameworkVersion: '3'
 
 provider:
   name: aws
   runtime: nodejs14.x
-    
-  iam:
-    role:
-      statements:
-        - Effect: Allow
-          Action:
-            - dynamodb:DescribeTable
-            - dynamodb:Query
-            - dynamodb:Scan
-            - dynamodb:GetItem
-            - dynamodb:PutItem
-            - dynamodb:UpdateItem
-            - dynamodb:DeleteItem
-          Resource: arn:aws:dynamodb:us-east-1:*:*
-
-resources:
-  Resources:
-    Results:
-      Type: "AWS::DynamoDB::Table"
-      Properties:
-        AttributeDefinitions:
-          - AttributeName: id
-            AttributeType: S
-        KeySchema:
-          - AttributeName: id
-            KeyType: HASH
-        ProvisionedThroughput:
-          ReadCapacityUnits: 1
-          WriteCapacityUnits: 1
-        TableName: "results"
+  lambdaHashingVersion: 2023329
+  region: us-east-1
 
 functions:
   play-game:

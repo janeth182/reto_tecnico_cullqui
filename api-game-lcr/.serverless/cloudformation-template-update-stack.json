@@ -162,7 +162,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/api-game-lcr/dev/1679332215238-2023-03-20T17:10:15.238Z/api-game-lcr.zip"
+          "S3Key": "serverless/api-game-lcr/dev/1679381838609-2023-03-21T06:57:18.609Z/api-game-lcr.zip"
         },
         "Handler": "dist/lambda.handler",
         "Runtime": "nodejs14.x",
@@ -180,14 +180,14 @@
         "MainLogGroup"
       ]
     },
-    "MainLambdaVersionETKjzAmkkVdcgMd3MKTTHOnLWeS805bmkylJrUgUpy8": {
+    "MainLambdaVersion8k6K6DZw5Qamej5mo1UtmixvOxKJezX9jICG5Y5New": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "MainLambdaFunction"
         },
-        "CodeSha256": "4VhLCEL3+y6Dt4NWhowkT2tAQ8MOpfj9qQtIoMp9Nws="
+        "CodeSha256": "kKSJl0hlYAJLQFd3MyRSPQVMoyKQF07adSHsKDivEBk="
       }
     },
     "HttpApi": {
@@ -298,7 +298,7 @@
     "MainLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "MainLambdaVersionETKjzAmkkVdcgMd3MKTTHOnLWeS805bmkylJrUgUpy8"
+        "Ref": "MainLambdaVersion8k6K6DZw5Qamej5mo1UtmixvOxKJezX9jICG5Y5New"
       },
       "Export": {
         "Name": "sls-api-game-lcr-dev-MainLambdaFunctionQualifiedArn"

@@ -4,7 +4,7 @@
             "type": "cloudformation",
             "title": "eventbridge",
             "timeOffsetInMs": 0,
-            "awsProfile": "default",
+            "awsProfile": "jvargas",
             "stacks": [
                 {
                     "region": "us-east-1",

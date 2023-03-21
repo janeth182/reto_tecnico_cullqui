@@ -1,6 +1,6 @@
 import { DynamoDBDocument } from "@aws-sdk/lib-dynamodb";
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
-import { uuid } from 'uuidv4';
+import { v4 as uuid } from 'uuid';
 
 export class LctDataAccess {
     async saveResult(data: any) {

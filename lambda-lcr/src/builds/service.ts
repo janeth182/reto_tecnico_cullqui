@@ -1,10 +1,11 @@
+import { Detail } from './dto/data-lcr.dto';
 import { LctDataAccess } from '../builds/data-access';
 const lctDataAccess = new LctDataAccess();
 export class LcrService {
-    async playLCR(payload: any): Promise<string> {
+    async playLCR(detail: Detail): Promise<string> {
         console.log("Service");
-        console.log(payload);
-        const input = payload.input.trim().split('\n');
+        console.log(detail);
+        const input = detail.input.trim().split('\n');
         let result = '';
         let j = 0;
         for (let i = 0; i < input.length; i++) {
