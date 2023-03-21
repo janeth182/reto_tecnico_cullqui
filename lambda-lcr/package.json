@@ -1,0 +1,21 @@
+{
+  "name": "lambda-lcr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.295.0",
+    "@aws-sdk/lib-dynamodb": "^3.295.0",
+    "@types/aws-lambda": "^8.10.101",
+    "serverless": "^3.21.0",
+    "serverless-offline": "^9.1.6",
+    "serverless-plugin-typescript": "^2.1.2",
+    "typescript": "^4.7.4",
+    "uuidv4": "^6.2.13"
+  },
+  "author": "",
+  "license": "ISC"
+}
